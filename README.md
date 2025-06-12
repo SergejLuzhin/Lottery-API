@@ -142,17 +142,6 @@ curl http://localhost:8080/draws/1/results
 - В каждый момент времени может быть только один активный тираж
 - После закрытия тиража (`/draws/{id}/close`) он становится недоступен для покупки билетов
 
-## Пример ошибок
-
-```
-curl -X POST http://localhost:8080/tickets \
-  -H "Content-Type: application/json" \
-  -d '{"numbers": [1, 2, 3]}'
-```
-
-Ответ:
-```json
-{
   "error": "Нужно выбрать ровно 5 чисел."
 }
 ```
